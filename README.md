@@ -56,7 +56,7 @@ module "app_service_plan" {
 | kind | The kind of the App Service Plan to create. See documentation https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html#kind | string | - | yes |
 | location | Azure location for App Service Plan. | string | - | yes |
 | location_short | Short string for Azure location. | string | - | yes |
-| name_suffix | Optional suffix for the generated name | string | `` | no |
+| name_prefix | Optional prefix for the generated name | string | `` | no |
 | per_site_scaling |  | string | `false` | no |
 | resource_group_name |  | string | - | yes |
 | sku | A sku block. See documentation https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html#sku | map | - | yes |
