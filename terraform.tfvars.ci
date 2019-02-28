@@ -1,0 +1,15 @@
+location="fr-central"
+location_short="frc"
+client_name="test"
+environment="test"
+stack="ci"
+resource_group_name="rg-test"
+name_suffix="-ci"
+sku = {
+  tier = "Basic"
+  size = "B2"
+}
+kind="Linux"
+extra_tags = {
+  foo = "bar"
+}
