@@ -24,8 +24,8 @@ variable "location_short" {
   type        = "string"
 }
 
-variable "name_suffix" {
-  description = "Optional suffix for the generated name"
+variable "name_prefix" {
+  description = "Optional prefix for the generated name"
   type        = "string"
   default     = ""
 }
