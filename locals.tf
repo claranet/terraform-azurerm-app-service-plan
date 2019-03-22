@@ -6,5 +6,5 @@ locals {
 
   name_prefix = "${var.name_prefix != "" ? "${var.name_prefix}-" : ""}"
 
-  app_service_plan_name = "${coalesce(var.custom_name, "${var.name_prefix}${var.stack}-${var.client_name}-${var.location_short}-${var.environment}-plan")}"
+  app_service_plan_name = "${coalesce(var.custom_name, "${local.name_prefix}${var.stack}-${var.client_name}-${var.location_short}-${var.environment}-plan")}"
 }

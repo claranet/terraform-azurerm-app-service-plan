@@ -46,11 +46,6 @@ variable "extra_tags" {
   default     = {}
 }
 
-variable "per_site_scaling" {
-  type    = "string"
-  default = "false"
-}
-
 variable "custom_name" {
   description = "Name of the App Service Plan, generated if not set."
   type        = "string"
