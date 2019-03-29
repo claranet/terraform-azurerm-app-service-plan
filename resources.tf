@@ -6,7 +6,7 @@ resource "azurerm_app_service_plan" "plan" {
   kind                = "${var.kind}"
   reserved            = "${var.kind != "Windows" ? true : var.reserved}"
 
-  sku = ["${var.sku}"]
+  sku = ["${merge(map("capacity", local.default_sku_capacity), var.sku)}"]
 
   tags = "${merge(local.default_tags, var.extra_tags)}"
 }
