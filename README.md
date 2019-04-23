@@ -3,6 +3,9 @@
 ## Purpose
 This Terraform module creates an [Azure App Service Plan](https://docs.microsoft.com/en-us/azure/app-service/overview-hosting-plans).
 
+## Requirements
+* Azure provider >= 1.20.0
+
 ## Usage
 You can use this module by including it this way:
 ```
