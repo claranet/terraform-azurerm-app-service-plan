@@ -1,8 +1,15 @@
-# 1.1.0 (23/04/2019)
+# Unreleased
 
-* AZ-64: Remove pinned provider version
-* AZ-68: Sets default capacity to 2 workers
+Added
+  * AZ-78: Fix for windows support
+  
+# v1.1.0 - 2019-04-23
 
-# 1.0.0 (28/02/2019)
+Changed
+  * AZ-64: Remove pinned provider version
+  * AZ-68: Sets default capacity to 2 workers
 
-* TER-313: First release
+# v1.0.0 - 2019-02-28
+
+Added
+  * TER-313: First release
