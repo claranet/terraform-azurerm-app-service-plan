@@ -1,9 +1,7 @@
 # Azure App Service Plan
 
-## Purpose
-
 This Terraform module creates an [Azure App Service Plan](https://docs.microsoft.com/en-us/azure/app-service/overview-hosting-plans)
-with default SKU capacity sets to "2".
+with default SKU capacity sets to "2" for dedicated plans.
 
 ## Requirements
 
@@ -12,7 +10,7 @@ with default SKU capacity sets to "2".
 ## Usage
 
 You can use this module by including it this way:
-```
+```hcl
 module "az-region" {
   source = "git::ssh://git@git.fr.clara.net/claranet/cloudnative/projects/cloud/azure/terraform/modules/regions.git?ref=vX.X.X"
 
@@ -64,7 +62,7 @@ module "app_service_plan" {
 | location | Azure location for App Service Plan. | string | n/a | yes |
 | location\_short | Short string for Azure location. | string | n/a | yes |
 | name\_prefix | Optional prefix for the generated name | string | `""` | no |
-| reserved | Is this App Service Plan is Reserved. | string | `"false"` | no |
+| reserved | Flag indicating if App Service Plan should be reserved. Forced to true if "kind" is "Linux". | string | `"false"` | no |
 | resource\_group\_name |  | string | n/a | yes |
 | sku | A sku block. See documentation https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html#sku | map | n/a | yes |
 | stack |  | string | n/a | yes |
