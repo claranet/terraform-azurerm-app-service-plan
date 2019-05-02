@@ -1,8 +1,8 @@
 # Unreleased
 
-Added
-  * AZ-78: Fix for windows support
-  
+Fixed
+  * AZ-78: Fix for Windows consumption function support
+
 # v1.1.0 - 2019-04-23
 
 Changed
