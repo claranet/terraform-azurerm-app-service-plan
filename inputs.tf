@@ -53,7 +53,7 @@ variable "custom_name" {
 }
 
 variable "reserved" {
-  description = "Is this App Service Plan is Reserved."
+  description = "Flag indicating if App Service Plan should be reserved. Forced to true if \"kind\" is \"Linux\"."
   type        = "string"
   default     = "false"
 }
