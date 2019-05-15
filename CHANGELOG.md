@@ -1,4 +1,4 @@
-# Unreleased
+# v1.1.1 - 2019-05-15
 
 Fixed
   * AZ-78: Fix for Windows consumption function support
