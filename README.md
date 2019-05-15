@@ -3,9 +3,10 @@
 This Terraform module creates an [Azure App Service Plan](https://docs.microsoft.com/en-us/azure/app-service/overview-hosting-plans)
 with default SKU capacity sets to "2" for dedicated plans.
 
-## Requirements
+## Requirements and limitations
 
 * Azure provider >= 1.20.0
+* [Mixing Windows and Linux apps in the same resource group is not supported by Azure](https://docs.microsoft.com/en-us/azure/app-service/containers/app-service-linux-intro#limitations)
 
 ## Usage
 
