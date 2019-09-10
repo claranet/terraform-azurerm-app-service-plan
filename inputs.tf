@@ -1,59 +1,60 @@
 variable "client_name" {
-  type = "string"
+  type = string
 }
 
 variable "environment" {
-  type = "string"
+  type = string
 }
 
 variable "stack" {
-  type = "string"
+  type = string
 }
 
 variable "resource_group_name" {
-  type = "string"
+  type = string
 }
 
 variable "location" {
   description = "Azure location for App Service Plan."
-  type        = "string"
+  type        = string
 }
 
 variable "location_short" {
   description = "Short string for Azure location."
-  type        = "string"
+  type        = string
 }
 
 variable "name_prefix" {
   description = "Optional prefix for the generated name"
-  type        = "string"
+  type        = string
   default     = ""
 }
 
 variable "sku" {
   description = "A sku block. See documentation https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html#sku"
-  type        = "map"
+  type        = map(string)
 }
 
 variable "kind" {
   description = "The kind of the App Service Plan to create. See documentation https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html#kind"
-  type        = "string"
+  type        = string
 }
 
 variable "extra_tags" {
   description = "Extra tags to add"
-  type        = "map"
+  type        = map(string)
   default     = {}
 }
 
 variable "custom_name" {
   description = "Name of the App Service Plan, generated if not set."
-  type        = "string"
+  type        = string
   default     = ""
 }
 
 variable "reserved" {
   description = "Flag indicating if App Service Plan should be reserved. Forced to true if \"kind\" is \"Linux\"."
-  type        = "string"
+  type        = string
   default     = "false"
 }
+
