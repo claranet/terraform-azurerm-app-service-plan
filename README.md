@@ -1,12 +1,12 @@
 # Azure App Service Plan
-[![Changelog](https://img.shields.io/badge/changelog-release-green.svg)](CHANGELOG.md) [![Notice](https://img.shields.io/badge/notice-copyright-yellow.svg)](NOTICE) [![Apache V2 License](http://img.shields.io/badge/license-Apache%20V2-blue.svg)](LICENSE)
+[![Changelog](https://img.shields.io/badge/changelog-release-green.svg)](CHANGELOG.md) [![Notice](https://img.shields.io/badge/notice-copyright-yellow.svg)](NOTICE) [![Apache V2 License](https://img.shields.io/badge/license-Apache%20V2-orange.svg)](LICENSE) [![TF Registry](https://img.shields.io/badge/terraform-registry-blue.svg)](https://registry.terraform.io/modules/claranet/app-service-plan/azurerm/)
 
 This Terraform module creates an [Azure App Service Plan](https://docs.microsoft.com/en-us/azure/app-service/overview-hosting-plans)
 with default SKU capacity sets to "2" for dedicated plans.
 
 ## Requirements and limitations
 
-* Azure provider >= 1.20.0
+* [AzureRM Terraform provider](https://www.terraform.io/docs/providers/azurerm/) >= 1.31
 * [Mixing Windows and Linux apps in the same resource group is not supported by Azure](https://docs.microsoft.com/en-us/azure/app-service/containers/app-service-linux-intro#limitations)
 
 ## Terraform version compatibility
@@ -24,13 +24,15 @@ More details about variables set by the `terraform-wrapper` available in the [do
 
 ```hcl
 module "azure-region" {
-  source = "git::ssh://git@git.fr.clara.net/claranet/cloudnative/projects/cloud/azure/terraform/modules/regions.git?ref=vX.X.X"
+  source  = "claranet/regions/azurerm"
+  version = "x.x.x"
 
   azure_region = var.azure_region
 }
 
 module "rg" {
-  source = "git::ssh://git@git.fr.clara.net/claranet/cloudnative/projects/cloud/azure/terraform/modules/rg.git?ref=vX.X.X"
+  source  = "claranet/rg/azurerm"
+  version = "x.x.x"
 
   location     = module.azure-region.location
   client_name  = var.client_name
@@ -39,7 +41,8 @@ module "rg" {
 }
 
 module "app_service_plan" {
-  source = "git::ssh://git@git.fr.clara.net/claranet/cloudnative/projects/cloud/azure/terraform/modules/app-service-plan.git?ref=vX.X.X"
+  source  = "claranet/app-service-plan/azurerm"
+  version = "x.x.x"
 
   client_name         = var.client_name
   environment         = var.environment
@@ -89,6 +92,6 @@ module "app_service_plan" {
 
 ## Related documentation
 
-Terraform resource documentation: [https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html]
+Terraform resource documentation: [www.terraform.io/docs/providers/azurerm/r/app_service_plan.html](https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html)
 
-Microsoft Azure documentation: [https://docs.microsoft.com/en-us/azure/app-service/overview-hosting-plans]
+Microsoft Azure documentation: [docs.microsoft.com/en-us/azure/app-service/overview-hosting-plans](https://docs.microsoft.com/en-us/azure/app-service/overview-hosting-plans)
