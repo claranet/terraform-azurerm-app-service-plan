@@ -12,14 +12,14 @@ with default SKU capacity sets to "2" for dedicated plans.
 
 | Module version | Terraform version |
 |----------------|-------------------|
-| 2.x.x          | 0.12.x            |
-| 1.x.x          | 0.11.x            |
+| >= 2.x.x       | 0.12.x            |
+| < 2.x.x        | 0.11.x            |
 
 ## Usage
 
 You can use this module by including it this way:
 ```hcl
-module "az-region" {
+module "azure-region" {
   source = "git::ssh://git@git.fr.clara.net/claranet/cloudnative/projects/cloud/azure/terraform/modules/regions.git?ref=vX.X.X"
 
   azure_region = var.azure_region
@@ -28,7 +28,7 @@ module "az-region" {
 module "rg" {
   source = "git::ssh://git@git.fr.clara.net/claranet/cloudnative/projects/cloud/azure/terraform/modules/rg.git?ref=vX.X.X"
 
-  location     = module.az-region.location
+  location     = module.azure-region.location
   client_name  = var.client_name
   environment  = var.environment
   stack        = var.stack
@@ -41,8 +41,8 @@ module "app_service_plan" {
   environment         = var.environment
   stack               = var.stack
   resource_group_name = module.rg.resource_group_name
-  location            = module.az-region.location
-  location_short      = module.az-region.location_short
+  location            = module.azure-region.location
+  location_short      = module.azure-region.location_short
 
   sku = {
     tier = "Basic"
