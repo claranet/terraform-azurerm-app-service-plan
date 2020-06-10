@@ -6,15 +6,15 @@ with default SKU capacity sets to "2" for dedicated plans.
 
 ## Requirements and limitations
 
-* [AzureRM Terraform provider](https://www.terraform.io/docs/providers/azurerm/) >= 1.31
 * [Mixing Windows and Linux apps in the same resource group is not supported by Azure](https://docs.microsoft.com/en-us/azure/app-service/containers/app-service-linux-intro#limitations)
 
-## Terraform version compatibility
+## Version compatibility
 
-| Module version | Terraform version |
-|----------------|-------------------|
-| >= 2.x.x       | 0.12.x            |
-| < 2.x.x        | 0.11.x            |
+| Module version    | Terraform version | AzureRM version |
+|-------------------|-------------------|-----------------|
+| >= 3.x.x          | 0.12.x            | >= 2.0          |
+| >= 2.x.x, < 3.x.x | 0.12.x            | <  2.0          |
+| <  2.x.x          | 0.11.x            | <  2.0          |
 
 ## Usage
 
@@ -67,19 +67,19 @@ module "app_service_plan" {
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|:----:|:-----:|:-----:|
-| client\_name | Client name/account used in naming | string | n/a | yes |
-| custom\_name | Name of the App Service Plan, generated if not set. | string | `""` | no |
-| environment | Project environment | string | n/a | yes |
-| extra\_tags | Extra tags to add | map(string) | `{}` | no |
-| kind | The kind of the App Service Plan to create. See documentation https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html#kind | string | n/a | yes |
-| location | Azure location. | string | n/a | yes |
-| location\_short | Short string for Azure location. | string | n/a | yes |
-| name\_prefix | Optional prefix for the generated name | string | `""` | no |
-| reserved | Flag indicating if App Service Plan should be reserved. Forced to true if "kind" is "Linux". | string | `"false"` | no |
-| resource\_group\_name | Resource group name | string | n/a | yes |
-| sku | A sku block. See documentation https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html#sku | map(string) | n/a | yes |
-| stack | Project stack name | string | n/a | yes |
+|------|-------------|------|---------|:--------:|
+| client\_name | Client name/account used in naming | `string` | n/a | yes |
+| custom\_name | Name of the App Service Plan, generated if not set. | `string` | `""` | no |
+| environment | Project environment | `string` | n/a | yes |
+| extra\_tags | Extra tags to add | `map(string)` | `{}` | no |
+| kind | The kind of the App Service Plan to create. See documentation https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html#kind | `string` | n/a | yes |
+| location | Azure location. | `string` | n/a | yes |
+| location\_short | Short string for Azure location. | `string` | n/a | yes |
+| name\_prefix | Optional prefix for the generated name | `string` | `""` | no |
+| reserved | Flag indicating if App Service Plan should be reserved. Forced to true if "kind" is "Linux". | `string` | `"false"` | no |
+| resource\_group\_name | Resource group name | `string` | n/a | yes |
+| sku | A sku block. See documentation https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html#sku | `map(string)` | n/a | yes |
+| stack | Project stack name | `string` | n/a | yes |
 
 ## Outputs
 
