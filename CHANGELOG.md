@@ -1,4 +1,4 @@
-# v2.0.1/v3.0.0 - Unreleased
+# v2.0.1/v3.0.0 - 2020-07-13
 
 Changed
   * AZ-206: Update README, CI, module compatible both AzureRM provider < 2.0 and >= 2.0
