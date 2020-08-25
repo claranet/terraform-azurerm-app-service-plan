@@ -1,4 +1,4 @@
-# v3.0.1 - unreleased
+# v3.1.0 - 2020-08-25
 
 Breaking
   * AZ-245: Force AzureRM 2.21.0 to avoid bug with linux function app
