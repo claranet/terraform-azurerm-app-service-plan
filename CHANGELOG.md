@@ -3,6 +3,9 @@
 Changed
   * AZ-398: Force lowercases on default generated name
 
+Added
+  * AZ-365 Add diagnostics settings
+  
 # v3.1.0 - 2020-08-25
 
 Breaking

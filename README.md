@@ -3,6 +3,7 @@
 
 This Terraform module creates an [Azure App Service Plan](https://docs.microsoft.com/en-us/azure/app-service/overview-hosting-plans)
 with default SKU capacity sets to "2" for dedicated plans.
+Diagnostics settings can also be activated for metrics only.
 
 ## Requirements and limitations
 
@@ -51,6 +52,11 @@ module "app_service_plan" {
   location            = module.azure-region.location
   location_short      = module.azure-region.location_short
 
+  logs_destinations_ids = [
+    data.terraform_remote_state.run.outputs.logs_storage_account_id,
+    data.terraform_remote_state.run.outputs.log_analytics_workspace_id
+  ]
+
   sku = {
     tier = "Basic"
     size = "B2"
@@ -75,6 +81,9 @@ module "app_service_plan" {
 | kind | The kind of the App Service Plan to create. See documentation https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html#kind | `string` | n/a | yes |
 | location | Azure location. | `string` | n/a | yes |
 | location\_short | Short string for Azure location. | `string` | n/a | yes |
+| log\_retention\_days | Number of days to keep logs | `number` | `31` | no |
+| logs\_destinations\_ids | List of destination resources Ids for logs diagnostics destination. Can be Storage Account, Log Analytics Workspace and Event Hub. No more than one of each can be set. Empty list to disable logging. | `list(string)` | `[]` | no |
+| logs\_metrics\_categories | Metrics categories to send to destinations. | `list(string)` | <pre>[<br>  "AllMetrics"<br>]</pre> | no |
 | name\_prefix | Optional prefix for the generated name | `string` | `""` | no |
 | reserved | Flag indicating if App Service Plan should be reserved. Forced to true if "kind" is "Linux". | `string` | `"false"` | no |
 | resource\_group\_name | Resource group name | `string` | n/a | yes |
@@ -89,6 +98,7 @@ module "app_service_plan" {
 | app\_service\_plan\_location | Azure location of the created App Service Plan |
 | app\_service\_plan\_max\_workers | Maximum number of workers for the created App Service Plan |
 | app\_service\_plan\_name | Name of the created App Service Plan |
+
 
 ## Related documentation
 
