@@ -16,8 +16,8 @@ resource "azurerm_app_service_plan" "plan" {
 }
 
 module "diagnostics" {
-  count  = var.logs_destinations_ids != [] ? 1 : 0
-  source = "git::ssh://git@git.fr.clara.net/claranet/projects/cloud/azure/terraform/modules/diagnostic-settings.git?ref=AZ-363-log-analytics-destination-type"
+  source  = "claranet/diagnostic-settings/azurerm"
+  version = "4.0.0"
 
   resource_id           = azurerm_app_service_plan.plan.id
   logs_destinations_ids = var.logs_destinations_ids
