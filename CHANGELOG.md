@@ -1,3 +1,8 @@
+# Unreleased
+
+Changed
+  * AZ-398: Force lowercases on default generated name
+
 # v3.1.0 - 2020-08-25
 
 Breaking
