@@ -5,7 +5,10 @@ Changed
 
 Added
   * AZ-365: Add diagnostics settings
-  
+
+Updated
+  * AZ-273: Module now compatible terraform `v0.13+`
+
 # v3.1.0 - 2020-08-25
 
 Breaking

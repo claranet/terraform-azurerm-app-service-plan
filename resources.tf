@@ -24,5 +24,4 @@ module "diagnostics" {
   log_categories        = []
   metric_categories     = var.logs_metrics_categories
   retention_days        = var.log_retention_days
-
 }
