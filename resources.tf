@@ -17,7 +17,7 @@ resource "azurerm_app_service_plan" "plan" {
 
 module "diagnostics" {
   source  = "claranet/diagnostic-settings/azurerm"
-  version = "4.0.0"
+  version = "4.0.1"
 
   resource_id           = azurerm_app_service_plan.plan.id
   logs_destinations_ids = var.logs_destinations_ids
