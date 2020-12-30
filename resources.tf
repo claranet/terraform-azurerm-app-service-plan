@@ -14,3 +14,14 @@ resource "azurerm_app_service_plan" "plan" {
 
   tags = merge(local.default_tags, var.extra_tags)
 }
+
+module "diagnostics" {
+  source  = "claranet/diagnostic-settings/azurerm"
+  version = "4.0.1"
+
+  resource_id           = azurerm_app_service_plan.plan.id
+  logs_destinations_ids = var.logs_destinations_ids
+  log_categories        = []
+  metric_categories     = var.logs_metrics_categories
+  retention_days        = var.log_retention_days
+}
