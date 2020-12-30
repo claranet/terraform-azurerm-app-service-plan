@@ -1,4 +1,4 @@
-# Unreleased
+# v4.0.0 - 2020-12-30
 
 Changed
   * AZ-398: Force lowercases on default generated name
