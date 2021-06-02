@@ -1,6 +1,6 @@
 # Unreleased
 
-Changed
+Breaking
   * AZ-160: Unify diagnostics settings on all Claranet modules
 
 # v4.0.0 - 2020-12-30
