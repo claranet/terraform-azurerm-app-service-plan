@@ -12,7 +12,8 @@ Diagnostics settings can also be activated for metrics only.
 ## Version compatibility
 
 | Module version | Terraform version | AzureRM version |
-|----------------|-------------------| --------------- |
+| -------------- | ----------------- | --------------- |
+| >= 5.x.x       | 0.15.x & 1.0.x    | >= 2.0          |
 | >= 4.x.x       | 0.13.x            | >= 2.0          |
 | >= 3.x.x       | 0.12.x            | >= 2.0          |
 | >= 2.x.x       | 0.12.x            | < 2.0           |
@@ -71,6 +72,25 @@ module "app_service_plan" {
 }
 ```
 
+<!-- BEGIN_TF_DOCS -->
+## Providers
+
+| Name | Version |
+|------|---------|
+| azurerm | >= 2.21.0 |
+
+## Modules
+
+| Name | Source | Version |
+|------|--------|---------|
+| diagnostics | claranet/diagnostic-settings/azurerm | 4.0.2 |
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [azurerm_app_service_plan.plan](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/app_service_plan) | resource |
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
@@ -100,9 +120,7 @@ module "app_service_plan" {
 | app\_service\_plan\_location | Azure location of the created App Service Plan |
 | app\_service\_plan\_max\_workers | Maximum number of workers for the created App Service Plan |
 | app\_service\_plan\_name | Name of the created App Service Plan |
-
+<!-- END_TF_DOCS -->
 ## Related documentation
-
-Terraform resource documentation: [www.terraform.io/docs/providers/azurerm/r/app_service_plan.html](https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html)
 
 Microsoft Azure documentation: [docs.microsoft.com/en-us/azure/app-service/overview-hosting-plans](https://docs.microsoft.com/en-us/azure/app-service/overview-hosting-plans)
