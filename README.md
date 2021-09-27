@@ -9,7 +9,8 @@ Diagnostics settings can also be activated for metrics only.
 
 * [Mixing Windows and Linux apps in the same resource group is not supported by Azure](https://docs.microsoft.com/en-us/azure/app-service/containers/app-service-linux-intro#limitations)
 
-## Version compatibility
+<!-- BEGIN_TF_DOCS -->
+## Global versioning rule for Claranet Azure modules
 
 | Module version | Terraform version | AzureRM version |
 | -------------- | ----------------- | --------------- |
@@ -26,7 +27,7 @@ which set some terraform variables in the environment needed by this module.
 More details about variables set by the `terraform-wrapper` available in the [documentation](https://github.com/claranet/terraform-wrapper#environment).
 
 ```hcl
-module "azure-region" {
+module "azure_region" {
   source  = "claranet/regions/azurerm"
   version = "x.x.x"
 
@@ -37,10 +38,22 @@ module "rg" {
   source  = "claranet/rg/azurerm"
   version = "x.x.x"
 
-  location     = module.azure-region.location
-  client_name  = var.client_name
-  environment  = var.environment
-  stack        = var.stack
+  location    = module.azure_region.location
+  client_name = var.client_name
+  environment = var.environment
+  stack       = var.stack
+}
+
+module "logs" {
+  source  = "claranet/run-common/azurerm//modules/logs"
+  version = "x.x.x"
+
+  client_name         = var.client_name
+  environment         = var.environment
+  stack               = var.stack
+  location            = module.azure_region.location
+  location_short      = module.azure_region.location_short
+  resource_group_name = module.rg.resource_group_name
 }
 
 module "app_service_plan" {
@@ -51,12 +64,12 @@ module "app_service_plan" {
   environment         = var.environment
   stack               = var.stack
   resource_group_name = module.rg.resource_group_name
-  location            = module.azure-region.location
-  location_short      = module.azure-region.location_short
+  location            = module.azure_region.location
+  location_short      = module.azure_region.location_short
 
   logs_destinations_ids = [
-    data.terraform_remote_state.run.outputs.logs_storage_account_id,
-    data.terraform_remote_state.run.outputs.log_analytics_workspace_id
+    module.logs.logs_storage_account_id,
+    module.logs.log_analytics_workspace_id
   ]
 
   sku = {
@@ -70,9 +83,9 @@ module "app_service_plan" {
     foo = "bar"
   }
 }
+
 ```
 
-<!-- BEGIN_TF_DOCS -->
 ## Providers
 
 | Name | Version |
