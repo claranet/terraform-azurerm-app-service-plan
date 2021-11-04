@@ -3,6 +3,9 @@
 Changed
   * AZ-572: Revamp examples and improve CI
 
+Updated:
+  * AZ-589: Update diagnostics settings to `v4.0.3`
+
 # v4.1.1 - 2021-08-27
 
 Changed
