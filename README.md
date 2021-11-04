@@ -90,6 +90,7 @@ module "app_service_plan" {
 
 | Name | Version |
 |------|---------|
+| azurecaf | ~> 1.1 |
 | azurerm | >= 2.21.0 |
 
 ## Modules
@@ -102,6 +103,7 @@ module "app_service_plan" {
 
 | Name | Type |
 |------|------|
+| [azurecaf_name.app_service_plan](https://registry.terraform.io/providers/aztfmod/azurecaf/latest/docs/resources/name) | resource |
 | [azurerm_app_service_plan.plan](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/app_service_plan) | resource |
 
 ## Inputs
@@ -120,10 +122,12 @@ module "app_service_plan" {
 | logs\_metrics\_categories | Metrics categories to send to destinations. | `list(string)` | `null` | no |
 | logs\_retention\_days | Number of days to keep logs on storage account | `number` | `30` | no |
 | name\_prefix | Optional prefix for the generated name | `string` | `""` | no |
+| name\_suffix | Optional suffix for the generated name | `string` | `""` | no |
 | reserved | Flag indicating if App Service Plan should be reserved. Forced to true if "kind" is "Linux". | `string` | `"false"` | no |
 | resource\_group\_name | Resource group name | `string` | n/a | yes |
 | sku | A sku block. See documentation https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html#sku | `map(string)` | n/a | yes |
 | stack | Project stack name | `string` | n/a | yes |
+| use\_caf\_naming | Use the Azure CAF naming provider to generate default resource name. `custom_name` override this if set. Legacy default name is used if this is set to `false`. | `bool` | `true` | no |
 
 ## Outputs
 
