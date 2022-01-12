@@ -1,3 +1,8 @@
+# v5.0.1 - unreleased
+
+Fixed
+  * AZ-515: Fix CAF naming and update Diag settings module with CAF naming too
+
 # v5.0.0 - 2021-11-24
 
 Breaking
