@@ -1,3 +1,8 @@
+# Unreleased
+
+Added
+  * AZ-615: Add an option to enable or disable default tags
+
 # v5.0.1 - 2022-01-12
 
 Fixed
@@ -40,7 +45,7 @@ Updated
 
 Breaking
   * AZ-245: Force AzureRM 2.21.0 to avoid bug with linux function app
-  
+
 
 # v2.0.1/v3.0.0 - 2020-07-13
 

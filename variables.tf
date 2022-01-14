@@ -38,12 +38,6 @@ variable "kind" {
   type        = string
 }
 
-variable "extra_tags" {
-  description = "Extra tags to add"
-  type        = map(string)
-  default     = {}
-}
-
 variable "reserved" {
   description = "Flag indicating if App Service Plan should be reserved. Forced to true if \"kind\" is \"Linux\"."
   type        = string
