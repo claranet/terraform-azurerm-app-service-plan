@@ -1,7 +1,7 @@
-# Azure App Service Plan
+# Azure Service Plan
 [![Changelog](https://img.shields.io/badge/changelog-release-green.svg)](CHANGELOG.md) [![Notice](https://img.shields.io/badge/notice-copyright-yellow.svg)](NOTICE) [![Apache V2 License](https://img.shields.io/badge/license-Apache%20V2-orange.svg)](LICENSE) [![TF Registry](https://img.shields.io/badge/terraform-registry-blue.svg)](https://registry.terraform.io/modules/claranet/app-service-plan/azurerm/)
 
-This Terraform module creates an [Azure App Service Plan](https://docs.microsoft.com/en-us/azure/app-service/overview-hosting-plans)
+This Terraform module creates an [Azure Service Plan](https://docs.microsoft.com/en-us/azure/app-service/overview-hosting-plans)
 with default SKU capacity sets to "2" for dedicated plans.
 Diagnostics settings can also be activated for metrics only.
 
@@ -91,7 +91,7 @@ module "app_service_plan" {
 | Name | Version |
 |------|---------|
 | azurecaf | ~> 1.1 |
-| azurerm | >= 2.21.0 |
+| azurerm | >= 3.0 |
 
 ## Modules
 
@@ -104,7 +104,7 @@ module "app_service_plan" {
 | Name | Type |
 |------|------|
 | [azurecaf_name.app_service_plan](https://registry.terraform.io/providers/aztfmod/azurecaf/latest/docs/resources/name) | resource |
-| [azurerm_app_service_plan.plan](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/app_service_plan) | resource |
+| [azurerm_service_plan.plan](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/service_plan) | resource |
 
 ## Inputs
 
@@ -135,10 +135,10 @@ module "app_service_plan" {
 
 | Name | Description |
 |------|-------------|
-| app\_service\_plan\_id | Id of the created App Service Plan |
-| app\_service\_plan\_location | Azure location of the created App Service Plan |
-| app\_service\_plan\_max\_workers | Maximum number of workers for the created App Service Plan |
-| app\_service\_plan\_name | Name of the created App Service Plan |
+| service\_plan\_id | ID of the created Service Plan |
+| service\_plan\_location | Azure location of the created Service Plan |
+| service\_plan\_max\_workers | Maximum number of workers for the created Service Plan |
+| service\_plan\_name | Name of the created Service Plan |
 <!-- END_TF_DOCS -->
 ## Related documentation
 
