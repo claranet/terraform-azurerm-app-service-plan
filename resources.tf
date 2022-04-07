@@ -15,8 +15,3 @@ resource "azurerm_service_plan" "plan" {
 
   tags = merge(local.default_tags, var.extra_tags)
 }
-
-moved {
-  from = azurerm_app_service_plan.plan
-  to   = azurerm_service_plan.plan
-}
