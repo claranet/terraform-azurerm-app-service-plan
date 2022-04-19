@@ -57,7 +57,7 @@ variable "app_service_environment_id" {
 variable "worker_count" {
   description = "The number of Workers (instances) to be allocated."
   type        = number
-  default     = null
+  default     = 2
 }
 
 variable "maximum_elastic_worker_count" {
