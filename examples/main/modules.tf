@@ -43,12 +43,8 @@ module "app_service_plan" {
     module.logs.log_analytics_workspace_id
   ]
 
-  sku = {
-    tier = "Basic"
-    size = "B2"
-  }
-
-  kind = "Linux"
+  os_type  = "Linux"
+  sku_name = "B2"
 
   extra_tags = {
     foo = "bar"
