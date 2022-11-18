@@ -87,7 +87,7 @@ module "app_service_plan" {
 
 | Name | Version |
 |------|---------|
-| azurecaf | ~> 1.1 |
+| azurecaf | ~> 1.2, >= 1.2.22 |
 | azurerm | >= 3.0 |
 
 ## Modules
@@ -100,8 +100,8 @@ module "app_service_plan" {
 
 | Name | Type |
 |------|------|
-| [azurecaf_name.app_service_plan](https://registry.terraform.io/providers/aztfmod/azurecaf/latest/docs/resources/name) | resource |
 | [azurerm_service_plan.plan](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/service_plan) | resource |
+| [azurecaf_name.app_service_plan](https://registry.terraform.io/providers/aztfmod/azurecaf/latest/docs/data-sources/name) | data source |
 
 ## Inputs
 
