@@ -1,4 +1,4 @@
-# Unreleased
+# v6.1.1 - 2022-12-12
 
 Fixed
   * AZ-908: Bump Diagnostic Settings module to `v6.2.0`
