@@ -1,4 +1,4 @@
-# Unreleased
+# v6.3.0 - 2023-12-01
 
 Added
   * AZ-1285: Add `P0v3` to possible values for `sku_name`
