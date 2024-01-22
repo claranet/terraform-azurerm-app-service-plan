@@ -136,6 +136,7 @@ module "app_service_plan" {
 | stack | Project stack name | `string` | n/a | yes |
 | use\_caf\_naming | Use the Azure CAF naming provider to generate default resource name. `custom_name` override this if set. Legacy default name is used if this is set to `false`. | `bool` | `true` | no |
 | worker\_count | The number of Workers (instances) to be allocated. | `number` | `3` | no |
+| zone\_balancing\_enabled | Should the Service Plan balance across Availability Zones in the region. | `bool` | `true` | no |
 
 ## Outputs
 

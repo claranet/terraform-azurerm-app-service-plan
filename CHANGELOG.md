@@ -1,3 +1,8 @@
+# Unreleased
+
+Added
+  * AZ-1336: Add `zone_balancing_enabled` parameter
+
 # v6.3.0 - 2023-12-01
 
 Added
