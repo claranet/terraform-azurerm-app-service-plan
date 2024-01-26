@@ -1,4 +1,4 @@
-# Unreleased
+# v6.4.0 - 2024-01-26
 
 Added
   * AZ-1336: Add `zone_balancing_enabled` parameter
