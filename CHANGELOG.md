@@ -1,3 +1,29 @@
+## 6.5.0 (2024-05-03)
+
+
+### Features
+
+* **AZ-1405:** add ternary condition for `zone_balancing_enabled` parameter 86a825c
+
+
+### Continuous Integration
+
+* **AZ-1391:** enable semantic-release [skip ci] e34bb61
+* **AZ-1391:** update semantic-release config [skip ci] e030b16
+
+
+### Miscellaneous Chores
+
+* **deps:** add renovate.json b22da40
+* **deps:** enable automerge on renovate e242ac7
+* **deps:** update dependency opentofu to v1.7.0 d0f4826
+* **deps:** update dependency tflint to v0.51.0 bf4caec
+* **deps:** update dependency trivy to v0.50.2 48f6f9f
+* **deps:** update dependency trivy to v0.50.4 6f873a9
+* **deps:** update renovate.json a538908
+* **pre-commit:** update commitlint hook bed5b55
+* **release:** remove legacy `VERSION` file c822235
+
 # v6.4.0 - 2024-01-26
 
 Added
