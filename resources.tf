@@ -6,9 +6,9 @@ resource "azurerm_service_plan" "plan" {
 
   os_type                = var.os_type
   sku_name               = var.sku_name
-  zone_balancing_enabled = var.zone_balancing_enabled
+  zone_balancing_enabled = local.zone_balancing_enabled
 
-  worker_count                 = var.sku_name == "Y1" ? null : var.worker_count
+  worker_count                 = local.worker_count
   maximum_elastic_worker_count = var.maximum_elastic_worker_count
 
   app_service_environment_id = var.app_service_environment_id
