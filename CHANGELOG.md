@@ -1,3 +1,31 @@
+## 7.0.0 (2024-06-14)
+
+
+### ⚠ BREAKING CHANGES
+
+* bump TF version to `v1.3+`
+
+### Features
+
+* add new SKUs P*mv3 f3e5990
+* bump TF version to `v1.3+` a44f53c
+
+
+### Miscellaneous Chores
+
+* **deps:** update dependency opentofu to v1.7.1 9a236d0
+* **deps:** update dependency opentofu to v1.7.2 db79e67
+* **deps:** update dependency pre-commit to v3.7.1 4e8aba6
+* **deps:** update dependency terraform-docs to v0.18.0 8a16bc3
+* **deps:** update dependency tflint to v0.51.1 1b20abb
+* **deps:** update dependency trivy to v0.51.0 f0a9acd
+* **deps:** update dependency trivy to v0.51.1 48a8e2d
+* **deps:** update dependency trivy to v0.51.2 3ba77ef
+* **deps:** update dependency trivy to v0.51.3 0a67177
+* **deps:** update dependency trivy to v0.51.4 7f5ecfa
+* **deps:** update dependency trivy to v0.52.0 cf4ad0a
+* **deps:** update dependency trivy to v0.52.1 61b06ee
+
 ## 6.5.0 (2024-05-03)
 
 
