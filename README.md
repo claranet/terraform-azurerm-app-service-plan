@@ -52,8 +52,8 @@ module "app_service_plan" {
   location_short      = module.azure_region.location_short
 
   logs_destinations_ids = [
-    module.logs.logs_storage_account_id,
-    module.logs.log_analytics_workspace_id
+    # module.logs.logs_storage_account_id,
+    # module.logs.log_analytics_workspace_id
   ]
 
   os_type  = "Linux"
@@ -93,7 +93,7 @@ module "app_service_plan" {
 | client\_name | Client name/account used in naming. | `string` | n/a | yes |
 | custom\_name | Name of the App Service Plan, generated if not set. | `string` | `""` | no |
 | default\_tags\_enabled | Option to enable or disable default tags. | `bool` | `true` | no |
-| diagnostic\_settings\_custom\_name | Custom name of the diagnostics settings, name will be 'default' if not set. | `string` | `"default"` | no |
+| diagnostic\_settings\_custom\_name | Custom name of the diagnostics settings, name will be `default` if not set. | `string` | `"default"` | no |
 | environment | Project environment. | `string` | n/a | yes |
 | extra\_tags | Extra tags to add. | `map(string)` | `{}` | no |
 | location | Azure location. | `string` | n/a | yes |
@@ -121,7 +121,6 @@ module "app_service_plan" {
 | module\_diagnostics | Diagnostics Settings module output. |
 | name | Name of the created Service Plan. |
 | resource | Azure App Service Plan resource object. |
-| resource\_diagnostics | Diagnostics settings module outputs. |
 <!-- END_TF_DOCS -->
 ## Related documentation
 
