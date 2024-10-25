@@ -1,14 +1,24 @@
-output "service_plan_id" {
-  description = "ID of the created Service Plan"
-  value       = azurerm_service_plan.plan.id
+output "resource" {
+  description = "Azure App Service Plan resource object."
+  value       = azurerm_service_plan.main
 }
 
-output "service_plan_name" {
-  description = "Name of the created Service Plan"
-  value       = azurerm_service_plan.plan.name
+output "id" {
+  description = "ID of the created Service Plan."
+  value       = azurerm_service_plan.main.id
 }
 
-output "service_plan_location" {
-  description = "Azure location of the created Service Plan"
-  value       = azurerm_service_plan.plan.location
+output "name" {
+  description = "Name of the created Service Plan."
+  value       = azurerm_service_plan.main.name
+}
+
+output "location" {
+  description = "Azure location of the created Service Plan."
+  value       = azurerm_service_plan.main.location
+}
+
+output "module_diagnostics" {
+  description = "Diagnostics Settings module output."
+  value       = module.diagnostics
 }

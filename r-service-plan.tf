@@ -1,5 +1,5 @@
-resource "azurerm_service_plan" "plan" {
-  name = local.app_service_plan_name
+resource "azurerm_service_plan" "main" {
+  name = local.name
 
   location            = var.location
   resource_group_name = var.resource_group_name
@@ -15,4 +15,9 @@ resource "azurerm_service_plan" "plan" {
   per_site_scaling_enabled   = var.per_site_scaling_enabled
 
   tags = merge(local.default_tags, var.extra_tags)
+}
+
+moved {
+  from = azurerm_service_plan.plan
+  to   = azurerm_service_plan.main
 }
