@@ -1,3 +1,13 @@
+## 8.0.1 (2024-11-08)
+
+### Bug Fixes
+
+* zone_balancing compatibles SKU 2a8707d
+
+### Miscellaneous Chores
+
+* **deps:** update tools 3393a9b
+
 ## 8.0.0 (2024-10-25)
 
 ### ⚠ BREAKING CHANGES
