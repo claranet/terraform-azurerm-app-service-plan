@@ -1,3 +1,29 @@
+## 8.1.0 (2025-02-07)
+
+### Features
+
+* **AZ-1510:** add new possible SKUs 8ca09cb
+
+### Miscellaneous Chores
+
+* **deps:** update dependency opentofu to v1.8.6 12ad393
+* **deps:** update dependency opentofu to v1.8.7 5e88b46
+* **deps:** update dependency opentofu to v1.8.8 5ecc325
+* **deps:** update dependency opentofu to v1.9.0 252e303
+* **deps:** update dependency pre-commit to v4.1.0 2e9c84b
+* **deps:** update dependency tflint to v0.54.0 8c1c826
+* **deps:** update dependency tflint to v0.55.0 b3c6c67
+* **deps:** update dependency trivy to v0.57.1 0c977e0
+* **deps:** update dependency trivy to v0.58.0 042cab3
+* **deps:** update dependency trivy to v0.58.1 b6482e0
+* **deps:** update dependency trivy to v0.58.2 54b34e8
+* **deps:** update dependency trivy to v0.59.1 710b4ca
+* **deps:** update pre-commit hook alessandrojcm/commitlint-pre-commit-hook to v9.19.0 2605d28
+* **deps:** update pre-commit hook alessandrojcm/commitlint-pre-commit-hook to v9.20.0 785f503
+* **deps:** update tools 87ab95b
+* update Github templates 1e96654
+* update tflint config for v0.55.0 4ea9e91
+
 ## 8.0.1 (2024-11-08)
 
 ### Bug Fixes
