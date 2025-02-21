@@ -28,7 +28,7 @@ variable "app_service_environment_id" {
 }
 
 variable "worker_count" {
-  description = "The number of Workers (instances) to be allocated."
+  description = "The number of Workers (instances) to be allocated. Can be set to null to ignore drift (see `./examples/autoscale`)."
   type        = number
   default     = 3
 }

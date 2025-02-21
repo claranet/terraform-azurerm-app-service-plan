@@ -52,8 +52,8 @@ module "app_service_plan" {
   location_short      = module.azure_region.location_short
 
   logs_destinations_ids = [
-    # module.logs.logs_storage_account_id,
-    # module.logs.log_analytics_workspace_id
+    module.run.logs_storage_account_id,
+    module.run.log_analytics_workspace_id,
   ]
 
   os_type  = "Linux"
@@ -109,7 +109,7 @@ module "app_service_plan" {
 | resource\_group\_name | Resource group name. | `string` | n/a | yes |
 | sku\_name | The SKU for the plan. Possible values include B1, B2, B3, D1, F1, FREE, I1, I2, I3, I1v2, I2v2, I3v2, P1v2, P2v2, P3v2, P0v3, P1v3, P1mv3, P2v3, P2mv3, P3v3, P3mv3, P4mv3, P5mv3, S1, S2, S3, SHARED, Y1, EP1, EP2, EP3, WS1, WS2, and WS3. | `string` | n/a | yes |
 | stack | Project stack name. | `string` | n/a | yes |
-| worker\_count | The number of Workers (instances) to be allocated. | `number` | `3` | no |
+| worker\_count | The number of Workers (instances) to be allocated. Can be set to null to ignore drift (see `./examples/autoscale`). | `number` | `3` | no |
 | zone\_balancing\_enabled | Should the Service Plan balance across Availability Zones in the region. | `bool` | `true` | no |
 
 ## Outputs
