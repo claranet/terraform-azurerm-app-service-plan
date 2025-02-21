@@ -1,3 +1,13 @@
+## 8.1.1 (2025-02-21)
+
+### Documentation
+
+* **AZ-1526:** add example with autoscale module eff49ff
+
+### Miscellaneous Chores
+
+* **deps:** update pre-commit hook alessandrojcm/commitlint-pre-commit-hook to v9.21.0 7ed7ccd
+
 ## 8.1.0 (2025-02-07)
 
 ### Features
