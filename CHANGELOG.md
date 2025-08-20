@@ -1,3 +1,37 @@
+## 8.2.0 (2025-08-20)
+
+### Features
+
+* **function app flex:** ✏️ update SKU options 4ee187b
+
+### Miscellaneous Chores
+
+* **⚙️:** ✏️ update template identifier for MR review 9771e63
+* 🗑️ remove old commitlint configuration files f99fb5f
+* **deps:** update dependency opentofu to v1.10.0 65ab74d
+* **deps:** update dependency opentofu to v1.10.1 96466d2
+* **deps:** update dependency opentofu to v1.10.3 95e0e61
+* **deps:** update dependency opentofu to v1.9.1 decfdcb
+* **deps:** update dependency pre-commit to v4.2.0 4e69c55
+* **deps:** update dependency terraform-docs to v0.20.0 2dbf871
+* **deps:** update dependency tflint to v0.56.0 706edc9
+* **deps:** update dependency tflint to v0.57.0 fb3feb4
+* **deps:** update dependency tflint to v0.58.0 b96f72d
+* **deps:** update dependency tflint to v0.58.1 bc25cf3
+* **deps:** update dependency trivy to v0.60.0 5bd043e
+* **deps:** update dependency trivy to v0.61.0 a9b4b4f
+* **deps:** update dependency trivy to v0.61.1 b1658a5
+* **deps:** update dependency trivy to v0.62.0 1c581c7
+* **deps:** update dependency trivy to v0.62.1 4071aeb
+* **deps:** update dependency trivy to v0.63.0 cfcf4c6
+* **deps:** update pre-commit hook alessandrojcm/commitlint-pre-commit-hook to v9.22.0 ff2f87f
+* **deps:** update pre-commit hook pre-commit/pre-commit-hooks to v6 46abd71
+* **deps:** update pre-commit hook tofuutils/pre-commit-opentofu to v2.2.0 9bb351a
+* **deps:** update pre-commit hook tofuutils/pre-commit-opentofu to v2.2.1 1dbdb0e
+* **deps:** update tools aff1c68
+* **deps:** update tools b382d79
+* **deps:** update tools 6753f9c
+
 ## 8.1.1 (2025-02-21)
 
 ### Documentation
