@@ -1,3 +1,16 @@
+## 8.3.0 (2025-11-07)
+
+### Features
+
+* **AZ-1620:** add v4 Premium + Isolated SKUs" 0916612
+
+### Miscellaneous Chores
+
+* **deps:** update dependency opentofu to v1.10.7 0fd5c3a
+* **deps:** update dependency trivy to v0.67.1 bd0d1b5
+* **deps:** update dependency trivy to v0.67.2 85c90c9
+* **deps:** update pre-commit hook tofuutils/pre-commit-opentofu to v2.2.2 5b3a88b
+
 ## 8.2.1 (2025-09-30)
 
 ### Code Refactoring
