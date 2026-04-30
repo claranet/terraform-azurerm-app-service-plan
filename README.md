@@ -68,27 +68,27 @@ module "app_service_plan" {
 ## Providers
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | azurecaf | >= 1.2.28 |
 | azurerm | ~> 4.31 |
 
 ## Modules
 
 | Name | Source | Version |
-|------|--------|---------|
+| ---- | ------ | ------- |
 | diagnostics | claranet/diagnostic-settings/azurerm | ~> 8.2.0 |
 
 ## Resources
 
 | Name | Type |
-|------|------|
+| ---- | ---- |
 | [azurerm_service_plan.main](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/service_plan) | resource |
 | [azurecaf_name.app_service_plan](https://registry.terraform.io/providers/claranet/azurecaf/latest/docs/data-sources/name) | data source |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | app\_service\_environment\_id | The ID of the App Service Environment to create this Service Plan in. Requires an Isolated SKU. Use one of I1, I2, I3 for `azurerm_app_service_environment`, or I1v2, I2v2, I3v2 for `azurerm_app_service_environment_v3`. | `string` | `null` | no |
 | client\_name | Client name/account used in naming. | `string` | n/a | yes |
 | custom\_name | Name of the App Service Plan, generated if not set. | `string` | `""` | no |
@@ -115,7 +115,7 @@ module "app_service_plan" {
 ## Outputs
 
 | Name | Description |
-|------|-------------|
+| ---- | ----------- |
 | id | ID of the created Service Plan. |
 | location | Azure location of the created Service Plan. |
 | module\_diagnostics | Diagnostics Settings module output. |
