@@ -1,6 +1,7 @@
 output "resource" {
   description = "Azure App Service Plan resource object."
   value       = azurerm_service_plan.main
+  sensitive   = true
 }
 
 output "id" {
