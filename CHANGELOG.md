@@ -1,3 +1,25 @@
+## 9.0.1 (2026-11-20)
+
+### Continuous Integration
+
+* **release:** drop semantic-release-slack-bot, the receiver posts releases c496841
+
+### Miscellaneous Chores
+
+* **deps:** ⬆️ update tools 🔗 308e5f0
+* **deps:** update dependency opentofu to v1.13.0 2cd78ba
+* **deps:** update dependency opentofu to v1.13.1 6147742
+* **deps:** update dependency opentofu to v1.13.2 dac408a
+* **deps:** update dependency opentofu to v1.13.9 4195978
+* **deps:** update dependency terraform-docs to v0.25.1 ccdb68f
+* **deps:** update dependency tflint to v0.65.0 2a100d5
+* **deps:** update dependency tflint to v0.66.0 d25fbbc
+* **deps:** update pre-commit hook crate-ci/committed to v1.1.12 91f8244
+
+### Revert
+
+* **ci:** 👷 restore the examples job now that the v9 dependencies are released c9dc310
+
 ## 9.0.0 (2026-08-19)
 
 ### ⚠ BREAKING CHANGES
